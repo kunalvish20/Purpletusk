@@ -65,17 +65,20 @@ export default function Home(){
     </section>
 
     <section className="proof-strip section">
-      <div className="container-wide proof-inner">
-        <div className="proof-title">
-          <div className="proof-brand-kicker"><img src="/brand/purple-tusk-elephant.png" alt="" aria-hidden="true"/><span className="micro">SO… WHAT IS PURPLE TUSK?</span></div>
-          <h2>BIG-PARENT PEACE.<br/><span>LITTLE-KID ENERGY.</span></h2>
-          <p>Clear ingredients. Simple routines. Kid-friendly formats.</p>
-        </div>
-        <div className="proof-circles">
-          <div><strong>clear</strong><span>ingredient story</span></div>
-          <div><strong>2+</strong><span>age-focused range</span></div>
-          <div><strong>zero</strong><span>boring routine vibes</span></div>
-          <div><strong>4</strong><span>simple use-cases</span></div>
+      <div className="container-wide proof-shell">
+        <div className="proof-inner">
+          <div className="proof-title">
+            <div className="proof-brand-kicker"><img src="/brand/purple-tusk-elephant.png" alt="" aria-hidden="true"/><span className="micro">SO… WHAT IS PURPLE TUSK?</span></div>
+            <h2>BIG-PARENT PEACE.<br/><span>LITTLE-KID ENERGY.</span></h2>
+            <p>Clear ingredients. Simple routines. Kid-friendly formats.</p>
+            <Link to="/about" className="proof-link">Get to know us <Icon name="arrow" size={18}/></Link>
+          </div>
+          <ul className="proof-benefits" aria-label="What makes Purple Tusk easy to choose">
+            <li className="proof-benefit"><span className="proof-benefit-number" aria-hidden="true">01</span><div><strong>Clear ingredients</strong><span>Know what goes into every pop.</span></div></li>
+            <li className="proof-benefit"><span className="proof-benefit-number" aria-hidden="true">02</span><div><strong>Ages 2+</strong><span>Guidance made easy to find.</span></div></li>
+            <li className="proof-benefit"><span className="proof-benefit-number" aria-hidden="true">03</span><div><strong>Four routines</strong><span>Find a fit for different days.</span></div></li>
+            <li className="proof-benefit"><span className="proof-benefit-number" aria-hidden="true">04</span><div><strong>Ready to go</strong><span>Little pops for busy family bags.</span></div></li>
+          </ul>
         </div>
       </div>
     </section>

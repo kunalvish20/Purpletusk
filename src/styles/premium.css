@@ -1620,3 +1620,109 @@ body { background: var(--cream); color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   .need-card, .need-visual img { transition: none; }
 }
+
+/* A more scannable introduction to the brand. */
+.proof-strip.section { padding-block: clamp(56px, 7vw, 96px); background: #fff0f4; }
+.proof-shell {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(28px, 4.2vw, 68px);
+  border: 1px solid rgba(165, 0, 51, .1);
+  border-radius: 36px;
+  background: radial-gradient(circle at 8% 95%, rgba(238, 250, 179, .62), transparent 37%), #fffaf6;
+  box-shadow: 0 24px 65px rgba(78, 35, 35, .07);
+}
+.proof-inner {
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(30px, 4vw, 72px);
+  align-items: center;
+}
+.proof-title { min-width: 0; }
+.proof-title h2 {
+  margin: 18px 0 16px;
+  font-size: clamp(40px, 4.1vw, 68px);
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+.proof-title p { max-width: 34ch; margin: 0; font-size: 16px; line-height: 1.55; }
+.proof-brand-kicker img { width: 52px; height: 44px; }
+.proof-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  min-height: 48px;
+  margin-top: 26px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: var(--purple-dark);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background .2s ease, transform .2s ease;
+}
+.proof-link:hover { background: var(--purple); transform: translateY(-2px); }
+.proof-link:focus-visible { outline: 3px solid var(--purple); outline-offset: 3px; }
+.proof-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.proof-benefit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  min-height: 184px;
+  padding: clamp(18px, 2vw, 26px);
+  border: 1px solid rgba(165, 0, 51, .1);
+  border-radius: 24px;
+  background: #ffe3eb;
+}
+.proof-benefit:nth-child(2) { background: #fff0db; }
+.proof-benefit:nth-child(3) { background: #f4f4d9; }
+.proof-benefit:nth-child(4) { background: #f8e8f0; }
+.proof-benefit-number {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(165, 0, 51, .14);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, .7);
+  color: var(--purple-dark);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+.proof-benefit div { display: grid; gap: 5px; }
+.proof-benefit strong { color: var(--purple-dark); font-size: clamp(20px, 1.8vw, 27px); line-height: 1.05; letter-spacing: -.035em; }
+.proof-benefit div span { color: #71404f; font-size: 13px; line-height: 1.4; }
+
+@media (max-width: 900px) {
+  .proof-inner { grid-template-columns: 1fr; gap: 28px; }
+  .proof-title { width: 100%; max-width: none; margin: 0; }
+  .proof-benefits { width: 100%; max-width: none; }
+}
+@media (max-width: 560px) {
+  .proof-shell { padding: 22px 18px 20px; border-radius: 26px; }
+  .proof-inner { gap: 24px; }
+  .proof-brand-kicker { gap: 9px; }
+  .proof-brand-kicker img { width: 40px; height: 36px; }
+  .proof-title .micro { font-size: 9px; letter-spacing: .11em; }
+  .proof-title h2 { margin: 13px 0 12px; font-size: clamp(30px, 8.8vw, 39px); }
+  .proof-title p { max-width: none; font-size: 14px; line-height: 1.5; }
+  .proof-link { min-height: 44px; margin-top: 19px; font-size: 13px; }
+  .proof-benefits { gap: 9px; }
+  .proof-benefit { min-height: 156px; padding: 14px 12px; border-radius: 18px; }
+  .proof-benefit-number { width: 30px; height: 30px; border-radius: 9px; font-size: 10px; }
+  .proof-benefit strong { font-size: clamp(16px, 4.5vw, 19px); }
+  .proof-benefit div span { font-size: 11px; line-height: 1.3; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .proof-link { transition: none; }
+}

@@ -29,7 +29,7 @@ export default function ProductCard({ product, compact = false }) {
         </div>
 
         <button type="button" className="btn btn-lime card-atc" onClick={() => addToCart(product)} aria-label={`Add ${product.name} to cart`}>
-          Add to cart <Icon name="bag" size={18} />
+          ADD TO CART <Icon name="bag" size={18} />
         </button>
       </div>
     </article>

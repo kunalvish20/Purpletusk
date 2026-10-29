@@ -37,7 +37,7 @@ export default function Product(){
           <p className="tax-note">Inclusive of taxes · Shipping calculated at checkout</p>
           <div className="benefit-bullets">{product.bullets.map(b=><span key={b}><Icon name="check" size={16}/>{b}</span>)}</div>
           <div className="pack-picker"><div className="field-label"><strong>Choose pack</strong><span>Best value highlighted</span></div><div className="pack-options">{product.packs.map((p,i)=><button onClick={()=>setPackIndex(i)} className={packIndex===i?'active':''} key={p.label}><strong>{p.label}</strong><span>₹{p.price}</span>{i===1&&<em>MOST POPULAR</em>}</button>)}</div></div>
-          <div className="atc-row"><div className="qty-control"><button onClick={()=>setQty(Math.max(1,qty-1))}><Icon name="minus"/></button><span>{qty}</span><button onClick={()=>setQty(qty+1)}><Icon name="plus"/></button></div><button className="btn btn-lime btn-lg pdp-atc" onClick={()=>addToCart(product,qty,pack)}>Add to cart · ₹{pack.price*qty}<Icon name="bag"/></button></div>
+          <div className="atc-row"><div className="qty-control"><button onClick={()=>setQty(Math.max(1,qty-1))}><Icon name="minus"/></button><span>{qty}</span><button onClick={()=>setQty(qty+1)}><Icon name="plus"/></button></div><button className="btn btn-lime btn-lg pdp-atc" onClick={()=>addToCart(product,qty,pack)}>ADD TO CART · ₹{pack.price*qty}<Icon name="bag"/></button></div>
           <div className="delivery-trust"><span><Icon name="truck"/> Free shipping ₹699+</span><span><Icon name="refresh"/> Easy support</span><span><Icon name="lock"/> Secure checkout</span></div>
           <PaymentBadges/>
           <div className="pdp-accordions">
@@ -57,6 +57,6 @@ export default function Product(){
 
       <section className="section related"><div className="container-wide"><div className="section-head"><div><span className="micro">PAIR IT WITH</span><h2>COMPLETE THE LITTLE ROUTINE.</h2></div></div><div className="product-grid three">{related.map(p=><ProductCard product={p} key={p.id}/>)}</div></div></section>
     </div>
-    <div className="mobile-sticky-atc"><div><span>{product.name}</span><strong>₹{pack.price}</strong></div><button className="btn btn-lime" onClick={()=>addToCart(product,1,pack)}>Add to cart</button></div>
+    <div className="mobile-sticky-atc"><div><span>{product.name}</span><strong>₹{pack.price}</strong></div><button className="btn btn-lime" onClick={()=>addToCart(product,1,pack)}>ADD TO CART</button></div>
   </>
 }
